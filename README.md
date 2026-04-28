@@ -73,3 +73,5 @@ As observed, all addresses are randomized except for the main program and global
 To better understand this behavior, we can quantify the randomness of these address distributions.
 
 One simple way to do this is by measuring entropy, which captures how spread out the values are.
+
+![Entropy results](Entropy_Screenshot2026-04-28130638.png)
