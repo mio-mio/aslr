@@ -52,7 +52,7 @@ However, when we examine the addresses as offsets, the pattern becomes even clea
 
 In the memory layout overview (log scale), the stack overlaps with libc and is not easily distinguishable. However, its address is not fixed.
 
-![Change Addresses]()
+![Change Addresses](Changed_Screenshot2026-04-27214231.png)
 
 The stack addresses consistently fall within the 0x7ff... range, suggesting a narrower range compared to the heap. Despite this, the stack is still randomized across executions, as shown below.
 
@@ -65,3 +65,5 @@ Similar to the stack, libc addresses are not fixed.
 Libc addresses consistently fall within the 0x7... range, but show a wider distribution compared to the stack.
 
 ![Libc Graph](Figure_4.png)
+
+## 5. The Full Picture: 
