@@ -18,7 +18,7 @@ I then used a Python script to run the program multiple times, collect address d
 
 ## 4. Observations: What Changed and What Didn’t
 
-< >
+![output](Changedynon_Screenshot2026-04-27215714.png)
 
 I observed that the addresses for the main program and global variables remained constant, while the addresses for the stack, heap, and libc changed on every execution.
 
@@ -32,9 +32,20 @@ In contrast, the stack and libc appear as relatively tight, horizontal bands at 
 
 ![All in one graph](Figure_A.png)
 
-### 4.1 Fixed Addresses
-### 4.2 Heap Behavior
+### 4.1 Fixed Addresses (The Main Program & Global Variables)
 
-### 4.3 Stack Behavior
+!(Fixed Addresses)[NotChanged_Screenshot2026]
+The main program and global variables remained at fixed addresses across all executions because the program was compiled without PIE.
 
-### 4.4 libc Behavior
+If PIE were enabled, these addresses would also be randomized, similar to other memory regions.
+
+### 4.2 Stack Behavior
+
+
+![Stack Graph](Figure_2.png)
+
+### 4.3 Heap Behavior
+![Heap Graph](Figure_3.png)
+
+### 4.4 Libc Behavior
+![Libc Graph](Figure_4.png)
