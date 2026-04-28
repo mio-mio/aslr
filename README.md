@@ -34,18 +34,22 @@ In contrast, the stack and libc appear as relatively tight, horizontal bands at 
 
 ### 4.1 Fixed Addresses (The Main Program & Global Variables)
 
-!(Fixed Addresses)[NotChanged_Screenshot2026]
+![Fixed Addresses](NotChanged_Screenshot2026-04-27214214.png)
+
 The main program and global variables remained at fixed addresses across all executions because the program was compiled without PIE.
 
 If PIE were enabled, these addresses would also be randomized, similar to other memory regions.
 
-### 4.2 Stack Behavior
+### 4.2 Heap Behavior
 
+Even in the combined graph, the heap already appears highly variable.  
 
-![Stack Graph](Figure_2.png)
+However, when we examine the addresses as offsets, the pattern becomes even clearer, as shown below.
 
-### 4.3 Heap Behavior
 ![Heap Graph](Figure_3.png)
+
+### 4.3 Stack Behavior
+![Stack Graph](Figure_2.png)
 
 ### 4.4 Libc Behavior
 ![Libc Graph](Figure_4.png)
