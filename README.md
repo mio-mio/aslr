@@ -66,4 +66,10 @@ Libc addresses consistently fall within the 0x7... range, but show a wider distr
 
 ![Libc Graph](Figure_4.png)
 
-## 5. The Full Picture: 
+### 4.5 Quantifying Randomness
+
+As observed, all addresses are randomized except for the main program and global variables.
+
+To better understand this behavior, we can quantify the randomness of these address distributions.
+
+One simple way to do this is by measuring entropy, which captures how spread out the values are.
