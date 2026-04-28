@@ -12,7 +12,9 @@ First, I focused on ASLR alone. When ASLR is available, it randomly assigns an a
 
 ## 3. Experiment Setup
 
-I prepared a simple C program (aslr_demo) based on a Qiita article (https://qiita.com/taharma/items/4b65d1776b0d3b55164f), compiled it without PIE, and collected address data over multiple executions.
+I prepared a simple C program (aslr_demo) based on a Qiita article (https://qiita.com/taharma/items/4b65d1776b0d3b55164f), compiled it without PIE.
+
+I then used a Python script to run the program multiple times, collect address data, and visualize the results using Matplotlib.
 
 ## 4. Observations: What Changed and What Didn’t
 ### 4.1 Fixed Addresses
