@@ -30,7 +30,7 @@ The heap shows a distinctive spread, covering a wide range of addresses across e
 
 In contrast, the stack and libc appear as relatively tight, horizontal bands at higher address ranges.
 
-![All in one graph](Figure_A.png)
+![memory layout overview (log scale)](Figure_A.png)
 
 ### 4.1 Fixed Addresses (The Main Program & Global Variables)
 
@@ -49,7 +49,19 @@ However, when we examine the addresses as offsets, the pattern becomes even clea
 ![Heap Graph](Figure_3.png)
 
 ### 4.3 Stack Behavior
+
+In the memory layout overview (log scale), the stack overlaps with libc and is not easily distinguishable. However, its address is not fixed.
+
+![Change Addresses]()
+
+The stack addresses consistently fall within the 0x7ff... range, suggesting a narrower range compared to the heap. Despite this, the stack is still randomized across executions, as shown below.
+
 ![Stack Graph](Figure_2.png)
 
 ### 4.4 Libc Behavior
+
+Similar to the stack, libc addresses are not fixed.
+
+Libc addresses consistently fall within the 0x7... range, but show a wider distribution compared to the stack.
+
 ![Libc Graph](Figure_4.png)
