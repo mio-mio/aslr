@@ -75,3 +75,15 @@ To better understand this behavior, we can quantify the randomness of these addr
 One simple way to do this is by measuring entropy, which captures how spread out the values are.
 
 ![Entropy results](Entropy_Screenshot2026-04-28130638.png)
+
+From the memory layout overview, the heap initially appeared to be the most randomized.
+
+However, in terms of entropy, the values are nearly identical across the heap, stack, and libc.
+
+This suggests that while the heap is more widely distributed, the stack and libc are still sufficiently varied within their narrower ranges.
+
+In other words, the difference lies in the range of distribution, not in the level of randomness itself.
+
+This leads to an important insight about how ASLR behaves in practice.
+
+## 5. Key Insight: Random, but Constrained
