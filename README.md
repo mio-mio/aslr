@@ -100,9 +100,9 @@ This leads to an important insight about how ASLR behaves in practice.
 
 ## 5. Key Insight: Random, but Constrained
 
-The entropy and graph results show that ASLR randomizes heap, stack, and libc addresses, but the ranges of these addresses are constrained.
+The entropy and graph results show that ASLR randomizes the addresses of heap, stack, and libc, but the ranges of these addresses are constrained.
 
-This constraint exists due to factors such as system safety, memory management, and performance considerations in the operating system.
+These constraints arise from factors such as system safety, memory management, and performance considerations in the operating system.
 
 Additionally, when examining the lower digits of the addresses, we can observe consistent patterns.
 
@@ -129,5 +129,7 @@ In this experiment, I observed that while addresses change across executions, th
 These constraints reduce the overall uncertainty, which can make certain attacks more feasible.
 
 In the next step, I plan to explore how PIE affects this behavior by introducing additional randomization, such as randomizing the base address of the program.
+
+This will help further understand how different mechanisms contribute to memory layout randomization.
 
 
